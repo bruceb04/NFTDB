@@ -8,8 +8,8 @@
 // @match      https://replay.pokemonshowdown.com/
 // @match      http://replay.pokemonshowdown.com/*
 // @match      https://replay.pokemonshowdown.com/*
-// @updateURL    https://github.com/beta20x/pokemon-showdown-custom-av-script/raw/main/script.js
-// @downloadURL  https://github.com/beta20x/pokemon-showdown-custom-av-script/raw/main/script.js
+// @updateURL    https://github.com/beta20x/NFTDB/raw/master/script.js
+// @downloadURL  https://github.com/beta20x/NFTDB/raw/master/script.js
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
