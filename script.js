@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name        Pokemon Showdown Avatar Replacer
+// @description Replaces avatars with custom "NFTs" on pokemon showdown
 // @match      http://play.pokemonshowdown.com/*
 // @match      https://play.pokemonshowdown.com/*
 // @match      http://play.pokemonshowdown.com/*
