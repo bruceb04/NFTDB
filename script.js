@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     1.0.5
+// @version     1.0.6
 // @grant       none
 // ==/UserScript==
 
