@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     1.0.9
+// @version     1.1.0
 // @grant       none
 // ==/UserScript==
 
@@ -25,12 +25,14 @@ const queries = ["https://play.pokemonshowdown.com/sprites/trainers/erika-gen2.p
                    "https://play.pokemonshowdown.com/sprites/trainers/sidney-gen3.png","https://play.pokemonshowdown.com/sprites/trainers/lusamine-masters.png",
                     "https://play.pokemonshowdown.com/sprites/trainers/archie-gen6.png", "https://play.pokemonshowdown.com/sprites/trainers/n-masters.png", 
                     "https://play.pokemonshowdown.com/sprites/trainers/youngster-gen1rb.png", "https://play.pokemonshowdown.com/sprites/trainers/fisherman-gen2jp.png",
-                    "https://play.pokemonshowdown.com/sprites/trainers/swimmerm-gen3rs.png", "https://play.pokemonshowdown.com/sprites/trainers/boarder-gen2.png"];
+                    "https://play.pokemonshowdown.com/sprites/trainers/swimmerm-gen3rs.png", "https://play.pokemonshowdown.com/sprites/trainers/boarder-gen2.png", 
+                    "https://play.pokemonshowdown.com/sprites/trainers/volkner-masters.png", "https://play.pokemonshowdown.com/sprites/trainers/sonia-professor.png"];
 const replacements = ["https://i.imgur.com/0TN5NDe.png", "https://i.imgur.com/TwJ1x9G.png", "https://i.imgur.com/ObCckQn.png",
                         "https://i.imgur.com/onhKdqk.png", "https://i.imgur.com/dUYdPN0.png", "https://i.imgur.com/DxuupCk.png",
                        "https://i.imgur.com/AbWrOcY.png", "https://i.imgur.com/j0Gu8WW.png", "https://i.imgur.com/Iphkl7n.png",
                         "https://i.imgur.com/5sVe5S3.png", "https://i.imgur.com/KrfdiLH.png", "https://i.imgur.com/gSl3nrz.png",
-                        "https://i.imgur.com/C6AG4cv.png", "https://i.imgur.com/fD3g1MI.png"];
+                        "https://i.imgur.com/C6AG4cv.png", "https://i.imgur.com/fD3g1MI.png", "https://i.imgur.com/MXUw7SY.png",
+                        "https://i.imgur.com/31hrE4h.png"];
 
 
 setInterval(function() {
