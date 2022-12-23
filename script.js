@@ -15,36 +15,116 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     1.1.0
+// @version     2.0.0
 // @grant       none
 // ==/UserScript==
 
-const queries = ["https://play.pokemonshowdown.com/sprites/trainers/erika-gen2.png", "https://play.pokemonshowdown.com/sprites/trainers/maid-gen4.png",
-                   "https://play.pokemonshowdown.com/sprites/trainers/blackbelt-gen1rb.png", "https://play.pokemonshowdown.com/sprites/trainers/acetrainer-gen1rb.png",
-                   "https://play.pokemonshowdown.com/sprites/trainers/expertf-gen6.png", "https://play.pokemonshowdown.com/sprites/trainers/beauty-gen6xy.png", 
-                   "https://play.pokemonshowdown.com/sprites/trainers/sidney-gen3.png","https://play.pokemonshowdown.com/sprites/trainers/lusamine-masters.png",
-                    "https://play.pokemonshowdown.com/sprites/trainers/archie-gen6.png", "https://play.pokemonshowdown.com/sprites/trainers/n-masters.png", 
-                    "https://play.pokemonshowdown.com/sprites/trainers/youngster-gen1rb.png", "https://play.pokemonshowdown.com/sprites/trainers/fisherman-gen2jp.png",
-                    "https://play.pokemonshowdown.com/sprites/trainers/swimmerm-gen3rs.png", "https://play.pokemonshowdown.com/sprites/trainers/boarder-gen2.png", 
-                    "https://play.pokemonshowdown.com/sprites/trainers/volkner-masters.png", "https://play.pokemonshowdown.com/sprites/trainers/sonia-professor.png"];
-const replacements = ["https://i.imgur.com/0TN5NDe.png", "https://i.imgur.com/TwJ1x9G.png", "https://i.imgur.com/ObCckQn.png",
-                        "https://i.imgur.com/onhKdqk.png", "https://i.imgur.com/dUYdPN0.png", "https://i.imgur.com/DxuupCk.png",
-                       "https://i.imgur.com/AbWrOcY.png", "https://i.imgur.com/j0Gu8WW.png", "https://i.imgur.com/Iphkl7n.png",
-                        "https://i.imgur.com/5sVe5S3.png", "https://i.imgur.com/KrfdiLH.png", "https://i.imgur.com/gSl3nrz.png",
-                        "https://i.imgur.com/C6AG4cv.png", "https://i.imgur.com/fD3g1MI.png", "https://i.imgur.com/MXUw7SY.png",
-                        "https://i.imgur.com/31hrE4h.png"];
+
+const data = [
+    {
+        name: "Jumpluff Ace Trainer",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/erika-gen2.png",
+        replacement: "https://i.imgur.com/0TN5NDe.png"
+    },
+    {
+        name: "Oleana Calyrex Ice",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/maid-gen4.png",
+        replacement: "https://i.imgur.com/TwJ1x9G.png"
+    },
+    {
+        name: "Rotom Heat Trainer",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/blackbelt-gen1rb.png",
+        replacement: "https://i.imgur.com/ObCckQn.png"
+    },
+    {
+        name: "Slowbro Trainer",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/acetrainer-gen1rb.png",
+        replacement: "https://i.imgur.com/onhKdqk.png"
+    },
+    {
+        name: "Grookey Trainer",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/expertf-gen6.png",
+        replacement: "https://i.imgur.com/dUYdPN0.png"
+    },
+    {
+        name: "Piers Overqwil",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/beauty-gen6xy.png",
+        replacement: "https://i.imgur.com/DxuupCk.png"
+    },
+    {
+        name: "Rocket Absol",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/sidney-gen3.png",
+        replacement: "https://i.imgur.com/AbWrOcY.png"
+    },
+    {
+        name: "Rocket Absol",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/sidney-gen3.png",
+        replacement: "https://i.imgur.com/AbWrOcY.png"
+    },
+    {
+        name: "Soliera Poipole",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/lusamine-masters.png",
+        replacement: "https://i.imgur.com/j0Gu8WW.png"
+    },
+    {
+        name: "Archie Primal Kyogre",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/archie-gen6.png",
+        replacement: "https://i.imgur.com/Iphkl7n.png"
+    },
+    {
+        name: "N Zoroark Hisui",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/n-masters.png",
+        replacement: "https://i.imgur.com/5sVe5S3.png"
+    },
+    {
+        name: "Mustard Kubfu",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/youngster-gen1rb.png",
+        replacement: "https://i.imgur.com/KrfdiLH.png"
+    },
+    {
+        name: "Ghetsis Eiscue Noice",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/fisherman-gen2jp.png",
+        replacement: "https://i.imgur.com/gSl3nrz.png"
+    },
+    {
+        name: "Basketball Player Sandaconda",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/swimmerm-gen3rs.png",
+        replacement: "https://i.imgur.com/C6AG4cv.png"
+    },
+    {
+        name: "Mordecai Articuno",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/boarder-gen2.png",
+        replacement: "https://i.imgur.com/fD3g1MI.png"
+    },
+    {
+        name: "Turo Miraidon",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/volkner-masters.png",
+        replacement: "https://i.imgur.com/MXUw7SY.png"
+    },
+    {
+        name: "Sada Koraidon",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/sonia-professor.png",
+        replacement: "https://i.imgur.com/31hrE4h.png"
+    },
+    {
+        name: "Red Zacain Crowned",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/red-gen1main.png",
+        replacement: "https://i.imgur.com/4HpdzJ8.png"
+    },
+    
+]
 
 
 setInterval(function() {
-    for (let image of document.getElementsByTagName('img')) {
-        for (let i = 0; i < queries.length; i++){
-            if (image.src == queries[i]) image.src = replacements[i];
+   
+
+    for (let i = 0; i < data.length; i++){
+        for (let image of document.getElementsByClassName('trainersprite')){
+            image.style['background-image'] = image.style['background-image'].replace(data[i].query, data[i].replacement);
         }
-    }
-    for (let image of document.getElementsByClassName('trainersprite')){
-        for (let j = 0; j < queries.length; j++){
-           image.style['background-image'] = image.style['background-image'].replace(queries[j], replacements[j]);
+        for (let image of document.getElementsByTagName('img')) {
+            if (image.src == data[i].query) image.src = data[i].replacement;
         }
     }
 
-}, 75);
+}, 50);
