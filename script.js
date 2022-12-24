@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.0
+// @version     2.0.2
 // @grant       none
 // ==/UserScript==
 
@@ -50,11 +50,6 @@ const data = [
         name: "Piers Overqwil",
         query: "https://play.pokemonshowdown.com/sprites/trainers/beauty-gen6xy.png",
         replacement: "https://i.imgur.com/DxuupCk.png"
-    },
-    {
-        name: "Rocket Absol",
-        query: "https://play.pokemonshowdown.com/sprites/trainers/sidney-gen3.png",
-        replacement: "https://i.imgur.com/AbWrOcY.png"
     },
     {
         name: "Rocket Absol",
@@ -111,13 +106,15 @@ const data = [
         query: "https://play.pokemonshowdown.com/sprites/trainers/red-gen1main.png",
         replacement: "https://i.imgur.com/4HpdzJ8.png"
     },
-    
+    {
+        name: "Collector Klawf",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/collector-masters.png",
+        replacement: "https://i.imgur.com/q7BvPK9.png"
+    }
 ]
 
 
 setInterval(function() {
-   
-
     for (let i = 0; i < data.length; i++){
         for (let image of document.getElementsByClassName('trainersprite')){
             image.style['background-image'] = image.style['background-image'].replace(data[i].query, data[i].replacement);
@@ -126,5 +123,4 @@ setInterval(function() {
             if (image.src == data[i].query) image.src = data[i].replacement;
         }
     }
-
 }, 50);
