@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.2
+// @version     2.0.3
 // @grant       none
 // ==/UserScript==
 
@@ -110,6 +110,16 @@ const data = [
         name: "Collector Klawf",
         query: "https://play.pokemonshowdown.com/sprites/trainers/collector-masters.png",
         replacement: "https://i.imgur.com/q7BvPK9.png"
+    },
+    {
+        name: "Clay Kleavor",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/bugsy-gen2.png",
+        replacement: "https://i.imgur.com/GsmDxUk.png"
+    },
+    {
+        name: "Homelander Palafin",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/theroyal.png",
+        replacement: "https://i.imgur.com/JYuqES2.png"
     }
 ]
 
