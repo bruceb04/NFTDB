@@ -120,6 +120,11 @@ const data = [
         name: "Homelander Palafin",
         query: "https://play.pokemonshowdown.com/sprites/trainers/theroyal.png",
         replacement: "https://i.imgur.com/JYuqES2.png"
+    }, 
+    {
+        name: "Fisherman Chi-Yu",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/fisherman-gen6.png",
+        replacement: "https://i.imgur.com/botOYvB.png"
     }
 ]
 
