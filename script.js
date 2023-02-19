@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.4
+// @version     2.0.5
 // @grant       none
 // ==/UserScript==
 
@@ -125,6 +125,11 @@ const data = [
         name: "Fisherman Chi-Yu",
         query: "https://play.pokemonshowdown.com/sprites/trainers/fisherman-gen6.png",
         replacement: "https://i.imgur.com/botOYvB.png"
+    },
+    {
+        name: "Colress Iron Valiant",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/colress-gen7.png",
+        replacement: "https://i.imgur.com/mngFNeL.png"
     }
 ]
 
