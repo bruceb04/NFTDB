@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.5
+// @version     2.0.6
 // @grant       none
 // ==/UserScript==
 
@@ -130,6 +130,11 @@ const data = [
         name: "Colress Iron Valiant",
         query: "https://play.pokemonshowdown.com/sprites/trainers/colress-gen7.png",
         replacement: "https://i.imgur.com/mngFNeL.png"
+    },
+    {
+        name: "Ball Guy Electrode",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/waiter-gen4dp.png",
+        replacement: "https://i.imgur.com/zOYlwET.png"
     }
 ]
 
