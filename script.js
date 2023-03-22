@@ -135,6 +135,11 @@ const data = [
         name: "Ball Guy Electrode",
         query: "https://play.pokemonshowdown.com/sprites/trainers/waiter-gen4dp.png",
         replacement: "https://i.imgur.com/zOYlwET.png"
+    },
+    {
+        name: "Wo-Chien Live Reaction",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/cameraman-gen8.png",
+        replacement: "https://i.imgur.com/rznoYXF.png"
     }
 ]
 
