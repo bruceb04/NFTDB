@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.7
+// @version     2.0.8
 // @grant       none
 // ==/UserScript==
 
@@ -140,6 +140,11 @@ const data = [
         name: "Wo-Chien Live Reaction",
         query: "https://play.pokemonshowdown.com/sprites/trainers/cameraman-gen8.png",
         replacement: "https://i.imgur.com/rznoYXF.png"
+    },
+    {
+        name: "Cram-o-Master",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/enginner-gen3.png",
+        replacement: "https://imgur.com/a/wN3mk61"
     }
 ]
 
