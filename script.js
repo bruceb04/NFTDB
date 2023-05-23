@@ -143,8 +143,8 @@ const data = [
     },
     {
         name: "Cram-o-Master",
-        query: "https://play.pokemonshowdown.com/sprites/trainers/enginner-gen3.png",
-        replacement: "https://imgur.com/a/wN3mk61"
+        query: "https://play.pokemonshowdown.com/sprites/trainers/engineer-gen3.png",
+        replacement: "https://i.imgur.com/ZgUdSRK.png"
     }
 ]
 
