@@ -15,7 +15,7 @@
 // @match      https://*.psim.us/
 // @match      http://*.psim.us/*
 // @match      https://*.psim.us/*
-// @version     2.0.9
+// @version     2.0.10
 // @grant       none
 // ==/UserScript==
 
@@ -145,6 +145,11 @@ const data = [
         name: "Cram-o-Master",
         query: "https://play.pokemonshowdown.com/sprites/trainers/engineer-gen3.png",
         replacement: "https://i.imgur.com/ZgUdSRK.png"
+    },
+    {
+        name: "Blackbelt Iron Hands",
+        query: "https://play.pokemonshowdown.com/sprites/trainers/blackbelt-gen7.png",
+        replacement: "https://i.imgur.com/n3DrtCm.png"
     }
 ]
 
